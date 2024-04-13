@@ -12,10 +12,10 @@ RUN apt-get update && apt-get install -y \
 RUN pip install jupyter
 
 # Install Stata
-ARG STATA_LICENSE_KEY
-RUN curl -o /tmp/stata.tgz https://download.stata.com/download/dmg/dmg-catA/v17/install-macos/stata17linux64.tar.gz \
-    && tar -xzvf /tmp/stata.tgz -C /usr/local \
-    && /usr/local/stata17/install -silent ${STATA_LICENSE_KEY}
+#ARG STATA_LICENSE_KEY
+#RUN curl -o /tmp/stata.tgz https://download.stata.com/download/dmg/dmg-catA/v17/install-macos/stata17linux64.tar.gz \
+#    && tar -xzvf /tmp/stata.tgz -C /usr/local \
+#    && /usr/local/stata17/install -silent ${STATA_LICENSE_KEY}
 
 # Expose port for Jupyter notebook
 EXPOSE 8888
