@@ -1,0 +1,19 @@
+{
+  "name": "Python and R Development Container",
+  "dockerFile": "Dockerfile",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": [
+    "ms-python.python",
+    "ikuyadeu.r",
+    "reditorsupport.r",
+    "rdebugger.r-debugger",
+    "statacorp.stata",
+    "kylebarron.stata-enhanced",
+    "ms-toolsai.jupyter",
+    "iterative.dvc",
+    "iterative.vscode-dvc-pack"
+  ],
+  "postCreateCommand": "pip install -r requirements.txt && R -e \"install.packages(c('IRkernel'), repos='https://cran.rstudio.com/')\""
+}
